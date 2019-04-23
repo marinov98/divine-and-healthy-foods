@@ -343,10 +343,11 @@ header {
 }
 
 .app-screen {
-  width: 100%;
+  width: 80%;
 }
 
 .work-step {
+  margin-top   : 65px;
   margin-bottom: 50px;
 }
 
