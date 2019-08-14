@@ -1,6 +1,6 @@
 $(document).ready(function() {
-    // THIS DOWN here does not work for whatever reason
-    /* For the sticky navigation 
+  // THIS DOWN here does not work for whatever reason
+  /* For the sticky navigation 
     $('.js--section-features').waypoint(function(direction) {
         if (direction == "down") {
             $('nav').addClass('sticky');
@@ -14,34 +14,68 @@ $(document).ready(function() {
 
     
     */
-    /* scroll buttons */
-    $('.js--scroll-to-plans').click(function () {
-        $('html, body').animate({scrollTop: $('.js--section-plans').offset().top}, 1000);
-    })
+  /* scroll buttons */
+  $(".js--scroll-to-plans").click(function() {
+    $("html, body").animate(
+      { scrollTop: $(".js--section-plans").offset().top },
+      1000
+    );
+  });
 
-    $('.js--scroll-to-start').click(function () {
-        $('html, body').animate({scrollTop: $('.js--section-features').offset().top}, 1000);
-    })
+  $(".js--scroll-to-start").click(function() {
+    $("html, body").animate(
+      { scrollTop: $(".js--section-features").offset().top },
+      1000
+    );
+  });
 
+  $(".js--scroll-to-features").click(function() {
+    $("html, body").animate({ scrollTop: $("#features").offset().top }, 1000);
+  });
 
-    /* navigation scroll */
-    $(function() {
-        $('a[href*=#]:not([href=#])').click(function() {
-          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-            if (target.length) {
-              $('html,body').animate({
-                scrollTop: target.offset().top
-              }, 1000);
-              return false;
-            }
-          }
-        });
-      });
-      
+  $(".js--scroll-to-works").click(function() {
+    $("html,body").animate({ scrollTop: $("#works").offset().top }, 1000);
+  });
 
-       /* Animations on scroll 
+  $(".js--scroll-to-cities").click(function() {
+    $("html,body").animate({ scrollTop: $("#cities").offset().top }, 1000);
+  });
+
+  $(".js--scroll-to-plans").click(function() {
+    $("html,body").animate({ scrollTop: $("#plans").offset().top }, 1000);
+  });
+
+  // Scroll to the top of the page
+  $(".js--scroll-to-top").click(function() {
+    $("html, body").animate({ scrollTop: 0 }, 1400, "swing");
+  });
+
+  /* navigation scroll */
+  //   $(function() {
+  //     $("a[href*=#]:not([href=#])").click(function() {
+  //       if (
+  //         location.pathname.replace(/^\//, "") ==
+  //           this.pathname.replace(/^\//, "") &&
+  //         location.hostname == this.hostname
+  //       ) {
+  //         var target = $(this.hash);
+  //         target = target.length
+  //           ? target
+  //           : $("[name=" + this.hash.slice(1) + "]");
+  //         if (target.length) {
+  //           $("html,body").animate(
+  //             {
+  //               scrollTop: target.offset().top
+  //             },
+  //             1000
+  //           );
+  //           return false;
+  //         }
+  //       }
+  //     });
+  //   });
+
+  /* Animations on scroll 
     $('.js--wp-1').waypoint(function(direction) {
         $('.js--wp-1').addClass('animated fadeIn');
     }, {
