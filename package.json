@@ -1,0 +1,21 @@
+{
+  "name": "divine-foods",
+  "version": "1.0.0",
+  "description": "psuedo premium healthy food service",
+  "main": "server.js",
+  "repository": "git@github.com:marinov98/marinov98.github.io.git",
+  "author": "Marin P. Marinov",
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn install",
+    "dev": "nodemon server/server.js",
+    "start": "node server/server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
