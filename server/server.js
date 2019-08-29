@@ -9,6 +9,8 @@ const port = parseInt(process.env.PORT, 10) || 5000;
 // Set port
 app.set("port", port);
 
+app.use(logger("dev"));
+
 app.use(express.static("public"));
 
 // Use logger
